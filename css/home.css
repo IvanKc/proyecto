@@ -1,0 +1,34 @@
+
+#transferir{
+    display: none;
+}
+#detalles{
+    display: none;
+}
+.ml{
+    margin-left: 30%;
+}
+.cuenta{
+    text-align: center;
+    margin-top: 10px;
+}
+.boton{
+    border: 1px solid #b0d7f2;
+    color: #037dd6;
+    background-color: #fff;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    margin-left: 33.3%;
+   
+}
+.boton2{
+    border: 1px solid #b0d7f2;
+    color: #037dd6;
+    background-color: #fff;
+    margin-top: 17px;
+    margin-bottom: 17px;
+   align-items: flex-start;
+}
+.add{
+    text-align: center;
+}

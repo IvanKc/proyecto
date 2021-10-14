@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1-rc.0/web3.min.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <p class="text-white-50 fw-bold">Wallet</p>
+          </a>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" onclick="ver_balance()">Balance</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="ver_transferencia()">Transferir</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="ver_detalles()">Detalles</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Configuración
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Perfil</a></li>
+                  
+                  <li><a class="dropdown-item" href="index.html">Cerrar Sesión</a></li>
+                  
+                  
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- Page Content -->
+      <div class="container py-5">
+
+        <section>
+          <div id="balance" class="card bg-dark text-white ml col-12 col-md-8 col-lg-6 col-xl-5">
+            <div>
+              <p class="cuenta">CUENTA</p>
+              <p id="add" class="add"> </p>
+              <p id="eth" class="add"> </p>
+              <p class="add">ETH </p>
+              
+            </div>
+        </div>
+        </section>
+        
+        <section>
+          <div id="transferir" class="card bg-dark text-white ml col-12 col-md-8 col-lg-6 col-xl-5">
+            <div>
+              <p class="cuenta">CUENTA</p>
+              <p id="add" class="add"> </p>
+              <input type="text" class="form-control form-control-lg" placeholder="Buscar, dirección pública (0x) o ENS," />
+              <div class="text-center">
+                <button class="boton2" type="submit" onclick='cancelar_trans()'>Cancelar</button>
+                <button class="boton2" type="submit" onclick='enviar()'>Enviar</button>
+            </div>
+            </div>
+         </div>
+        </section>
+        
+
+        <section>
+          <div id="detalles" class="card bg-dark text-white ml col-12 col-md-8 col-lg-6 col-xl-5">
+            <div id="mos_det" style="display: block;">
+              <p class="cuenta">CUENTA</p>
+              <p id="add" class="add"> </p>
+              <div>
+                <button class="boton" onclick="exportar()">Exportar Clave privada</button>
+              </div>
+            </div>
+
+            <div id="mos_key" style="display: none;">
+              <p class="cuenta">CUENTA</p>
+              <div class="form-outline form-white mb-4">
+                <label class="form-label">Escriba su Contraseña</label>
+                <input type="password" id="contrasenia" class="form-control form-control-lg" />
+              </div>
+              <div class="text-center">
+                <button class="boton2" type="submit" onclick='cancelar()'>Cancelar</button>
+                <button class="boton2" type="submit" onclick='ingresar()'>Confirmar</button>
+            </div>
+              
+            </div>
+
+          </div>
+
+        </section>
+       
+        
+      </div>
+    
+</body>
+</html>
